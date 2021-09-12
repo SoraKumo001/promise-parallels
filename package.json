@@ -1,11 +1,14 @@
 {
-  "name": "promise-parallel",
+  "name": "@node-libraries/promise-limit",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
     "start": "ts-node test",
     "build": "tsc -b src",
     "lint:fix": "eslint --fix src/ && prettier -w src"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@types/node": "^16.9.1",
@@ -33,5 +36,5 @@
     "url": "https://github.com/SoraKumo001/promise-parallels/issues"
   },
   "homepage": "https://github.com/SoraKumo001/promise-parallels#readme",
-  "description": ""
+  "description": "Limits the maximum number of asynchronous processes that can be executed"
 }

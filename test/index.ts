@@ -1,6 +1,6 @@
-import { Parallel } from '../src';
+import { promiseLimit } from '../src';
 const main = async () => {
-  const ps = Parallel();
+  const ps = promiseLimit();
   for (let i = 0; i < 10; i++) {
     // Execute a random exit process and save the Promise
     ps.add(new Promise((resolve) => setTimeout(() => resolve(i), Math.random() * 1000)));

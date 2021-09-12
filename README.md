@@ -1,19 +1,19 @@
-# promise-parallel
+# @node-libraries/promise-limit
 
 Limits the maximum number of asynchronous processes that can be executed.  
 The number of executions is controlled at the loop stage, so no memory is wasted in the queue.
 
 ## usage
 
-- `Parallel()` to create an instance
+- `promiseLimit()` to create an instance
 - `add()` to store Promise
 - `wait()` waits for a specified maximum number
 - `all()` waits for remaining processes
 
 ```ts
-import { Parallel } from 'promise-parallel';
+import { promiseLimit } from '@node-libraries/promise-limit';
 const main = async () => {
-  const ps = Parallel();
+  const ps = promiseLimit();
   for (let i = 0; i < 10; i++) {
     // Execute a random exit process and save the Promise
     ps.add(new Promise((resolve) => setTimeout(() => resolve(i), Math.random() * 100)));
