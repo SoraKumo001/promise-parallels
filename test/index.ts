@@ -1,16 +1,16 @@
-import { Parallels } from '../src';
+import { Parallel } from '../src';
 const main = async () => {
-  const ps = Parallels();
+  const ps = Parallel();
   for (let i = 0; i < 10; i++) {
-    // ランダムに終了する処理を実行し、Promiseを保存
-    ps.add(new Promise((resolve) => setTimeout(() => resolve(i), Math.random() * 100)));
-    // 最大並列実行数を指定し待機
-    // 戻り値 false:制限値内で処理が終了していない
-    // 戻り値 resolveで戻した処理のindex
+    // Execute a random exit process and save the Promise
+    ps.add(new Promise((resolve) => setTimeout(() => resolve(i), Math.random() * 1000)));
+    // Specify the maximum number of parallel execution and wait
+    // Return value false: the process has not finished within the limit
+    // Return index of the process returned by resolve
     const v = await ps.wait(5);
-    console.log(`${i}:${v}`); // ループ回数:終了した関数を表示
+    console.log(`${i}:${v}`); // Number of loops: display the finished function
   }
-  // 並列5未満でループを抜けた場合の残存処理待ち
+  // wait for remaining processing if the loop exits with less than 5 in parallel
   (await ps.all()).forEach((v) => console.log(`*:${v}`));
 };
 

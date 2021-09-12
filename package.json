@@ -21,9 +21,14 @@
     "type": "git",
     "url": "git+https://github.com/SoraKumo001/promise-parallels.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "typescript",
+    "promise",
+    "parallel",
+    "limit"
+  ],
+  "author": "SoraKumo",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/SoraKumo001/promise-parallels/issues"
   },
