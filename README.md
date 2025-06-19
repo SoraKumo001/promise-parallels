@@ -1,5 +1,10 @@
 # @node-libraries/promise-limit
 
+[![](https://img.shields.io/npm/l/@node-libraries/promise-limit)](https://www.npmjs.com/package/@node-libraries/promise-limit)
+[![](https://img.shields.io/npm/v/@node-libraries/promise-limit)](https://www.npmjs.com/package/@node-libraries/promise-limit)
+[![](https://img.shields.io/npm/dw/@node-libraries/promise-limit)](https://www.npmjs.com/package/@node-libraries/promise-limit)
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/SoraKumo001/promise-parallels)
+
 Limits the maximum number of asynchronous processes that can be executed.  
 The number of executions is controlled at the loop stage, so no memory is wasted in the queue.
 
